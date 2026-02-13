@@ -30,6 +30,7 @@ body {
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
+  text-align: justify;
 }
 
 /* Navbar */
@@ -259,7 +260,7 @@ body {
 
 /* Sections */
 .section {
-  padding: 28px 24px;
+  padding: 20px 24px;
 }
 
 .section h2 {
@@ -402,6 +403,7 @@ body {
 .section p {
   margin: 0 0 16px;
   color: var(--text);
+  text-align: justify;
 }
 
 .section p:last-child {
@@ -419,6 +421,10 @@ body {
 .abstract p {
   font-size: 1.05rem;
   max-width: 72ch;
+}
+
+.small-caps {
+  font-variant: small-caps;
 }
 
 /* Video */
