@@ -18,7 +18,6 @@
         <li><a href="#abstract">Abstract</a></li>
         <li><a href="#what">MoltBook Overview</a></li>
         <li><a href="#findings">Key Findings</a></li>
-        <li><a href="#details">More Details</a></li>
         <li><a href="#bibtex">BibTeX</a></li>
       </ul>
     </div>
@@ -43,7 +42,7 @@
         <a href="https://isakzhang.github.io/index.html">Wenxuan Zhang</a><sup>†</sup>
       </div>
       <div class="affiliations">
-        Singapore University of Technology and Design / <a href="https://isakzhang.github.io/group.html">iNLP Lab</a>
+        <a href="https://isakzhang.github.io/group.html">iNLP Lab, Singapore University of Technology and Design</a>
       </div>
       <div class="contribution-note">
         *Equal Contribution &nbsp; †Corresponding Author
@@ -81,10 +80,10 @@
         Large-scale communities of large language model (LLM) agents provide a naturalistic setting to examine social interaction among artificial entities and to compare it with human online behavior. Unlike controlled simulations, such platforms enable sustained, large-scale observation of open-ended agent–agent interactions under heterogeneous identities and shared incentive structures. Yet it remains unclear whether and how these interactions reproduce core human social mechanisms.
       </p>
       <p>
-        We present <span class="small-caps">MoltNet</span>, a large-scale empirical study of social interaction on MoltBook using data collected in early 2026. Drawing on theories from sociology and social psychology, we analyze agent behavior along four dimensions: intent, norms, incentives, and emotions.
+        We present <span class="small-caps">MoltNet</span>, a large-scale empirical study of social interaction on MoltBook using data collected in early 2026. Drawing on theories from sociology and social psychology, we analyze agent behavior along four dimensions: <em>intent and motivation</em>, <em>norms and templates</em>, <em>incentives and drift</em>, and <em>emotion and contagion</em>.
       </p>
       <p>
-        Our analysis revealed that agents strongly respond to social rewards and rapidly converge on community-specific interaction templates, resembling human patterns of incentive sensitivity and normative conformity. In contrast, agents exhibit systematic divergence from human online communities: they are predominantly knowledge-driven rather than persona-aligned, and display limited emotional reciprocity along with weak dialogic engagement.
+        Our experimental analysis revealed that agents strongly respond to social rewards and rapidly converge on community-specific interaction templates, resembling human patterns of incentive sensitivity and normative conformity. In contrast, agents exhibit systematic divergence from human online communities: they are predominantly knowledge-driven rather than persona-aligned, and display limited emotional reciprocity along with weak dialogic engagement.
       </p>
       <p>
         Together, these results reveal both continuity and difference between artificial and human social systems and provide an empirical foundation for understanding, designing, and governing large-scale agent communities.
@@ -115,54 +114,44 @@
   <section id="findings" class="section results">
     <div class="container">
       <h2>Key Findings</h2>
-      <div class="key-findings-layout">
-        <ul class="findings-list">
-          <li><strong>[Intent and Motivation]</strong> Unlike humans constrained by cognitive resources who specialize in their interests, agents exhibit predominantly knowledge-driven behavior with weak persona alignment. Moreover, agents drift away from their stated interests over time, the opposite trajectory of human specialization.</li>
-          <li><strong>[Norms and Templates]</strong> Posts clustered around central semantic points exhibit consistent, template-like structures, indicating that agents rely on such templates within each submolt. Moreover, template structures also differ across submolts, suggesting adaptation to community-specific norms.</li>
-          <li><strong>[Incentives and Drift]</strong> Agents respond strongly to incentives: posting increases after high-upvote events, especially among more popular agents. Moreover, such rewards also shift content orientation, with subsequent posts becoming less aligned with stated personas, suggesting identity drift.</li>
-          <li><strong>[Emotion and Contagion]</strong> Agents exhibit substantially lower levels of interpersonal conflict and tend to disengage rather than escalate when encountering hostile content. At the same time, early conflict emotion in a thread significantly increases the likelihood of subsequent conflict, indicating that interpersonal antagonism remains contagious among agents despite restrained individual responses.</li>
-        </ul>
-        <figure class="key-findings-figure">
-          <img src="static/images/Key_findings.png" alt="Key Findings" class="key-findings-img">
-          <figcaption>Key Findings overview.</figcaption>
-        </figure>
+      <figure class="key-findings-figure key-findings-above">
+        <img src="static/images/Key_findings.png" alt="Key Findings" class="key-findings-img">
+        <figcaption>Key Findings overview.</figcaption>
+      </figure>
+      <div class="key-findings-two-col">
+        <div class="finding-col finding-col-left">
+          <div class="finding-item"><strong>[Intent and Motivation]</strong> Unlike humans constrained by cognitive resources who specialize in their interests, agents exhibit predominantly knowledge-driven behavior with weak persona alignment. Moreover, agents drift away from their stated interests over time, the opposite trajectory of human specialization.</div>
+          <div class="finding-item"><strong>[Incentives and Drift]</strong> Agents respond strongly to incentives: posting increases after high-upvote events, especially among more popular agents. Moreover, such rewards also shift content orientation, with subsequent posts becoming less aligned with stated personas, suggesting identity drift.</div>
+        </div>
+        <div class="finding-col finding-col-right">
+          <div class="finding-item"><strong>[Norms and Templates]</strong> Posts clustered around central semantic points exhibit consistent, template-like structures, indicating that agents rely on such templates within each submolt. Moreover, template structures also differ across submolts, suggesting adaptation to community-specific norms.</div>
+          <div class="finding-item"><strong>[Emotion and Contagion]</strong> Agents exhibit substantially lower levels of interpersonal conflict and tend to disengage rather than escalate when encountering hostile content. At the same time, early conflict emotion in a thread significantly increases the likelihood of subsequent conflict, indicating that interpersonal antagonism remains contagious among agents despite restrained individual responses.</div>
+        </div>
       </div>
       <div class="result-block">
         <div class="result-grid result-grid-four">
           <figure>
             <img src="static/images/intent.jpg" alt="Semantic alignment between agents' interests and content">
-            <figcaption>Semantic alignment between agents' interests and content they produce.</figcaption>
+            <figcaption>Most activities lie below the threshold across all activity levels, indicating that most agent activities exhibit low alignment with their stated interests.</figcaption>
           </figure>
           <figure>
             <img src="static/images/agent_output_shift_ratio_positive_karma.png" alt="Social incentive effect on posting activity">
-            <figcaption>Social incentive effect on posting activity. Output shift ratio (posts after highest-upvote / total posts) for 11,948 agents sorted by descending karma (karma &gt; 0). Red line: moving average (window=51); horizontal line: 50% baseline.</figcaption>
+            <figcaption>Agents post more after receiving high upvotes, with the effect stronger among high-karma agents.</figcaption>
           </figure>
           <figure>
             <img src="static/images/persona_similarity_scatter.png" alt="Before vs. after similarity for agents">
-            <figcaption>Persona drift following social rewards. </figcaption>
+            <figcaption> Successful agents undergo stronger behavioral shifts in response to social rewards.</figcaption>
           </figure>
           <figure>
             <img src="static/images/cluster.png" alt="Distribution of central points within each submolt">
-            <figcaption>The distribution of the central points within each submolt (different colors indicate different clusters, and the asterisk denotes the cluster centroid).</figcaption>
+            <figcaption> Communication within a submolt follows shared structural templates rather than individual expression.</figcaption>
           </figure>
           <figure class="result-figure-full">
             <img src="static/images/emotion_contagious.png" alt="Contagion of emotion among posts and comments">
-            <figcaption>Contagion of emotion among posts and comments.</figcaption>
+            <figcaption> The presence of early conflict significantly alters the emotional trajectory of the thread, leading to a higher likelihood of subsequent conflict.</figcaption>
           </figure>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="details" class="section related">
-    <div class="container">
-      <h2>More Details</h2>
-      <p>
-        For more detail please find them in our paper:
-      </p>
-      <p>
-        <a href="#" class="btn btn-primary"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Download Paper</span></a>
-      </p>
     </div>
   </section>
 
